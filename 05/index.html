@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="dashboard"> 
+        <div class="top-dashboard">
+            <div class="card">
+                <h2>NPS geral</h2>
+                <div class="card-content">
+                    <img src="assets/smile.svg" alt="Emoji sorriso">
+                    <h2>Excelente!</h2>
+                </div>
+                <div class="card-footer">
+                    <h6>NPS Score</h6>
+                    <p>75</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Vendas fechadas</h2>     
+                <div class="donut-chart">
+                    <svg viewBox="0 0 232 232" style="--percentage: 80">
+                        <circle cx="50%" cy="50%" r="98.5" stroke="#D9D9D9" opacity=".1"/>
+                        <circle cx="50%" cy="50%" r="98.5" stroke="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="-9" y1="82" x2="145" y2="178" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#CE9FFC"></stop>
+                                <stop offset="1" stop-color="#7367F0"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="num">
+                      <h1>70%</h1>
+                      <p>Alcançada</p>
+                    </div>
+                </div>
+    
+                <div class="card-sales-footer">
+    
+                    <div class="card-sales-legend">
+                        <div class="expected">
+                            <div class="circle-legend expected"></div>
+                            <h6>Esperado</h6>
+                        </div>
+                        <p>100</p>
+                    </div>
+    
+                    <div class="card-sales-legend">
+                        <div class="total">
+                            <div class="circle-legend sales total"></div>
+                            <h6>Alcançado</h6>
+                        </div>
+                        <p>70</p>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="card">
+                <h2>Meta mensal</h2>
+                <div class="donut-chart">
+                    <svg viewBox="0 0 232 232" style="--percentage: 90">
+                        <circle cx="50%" cy="50%" r="98.5" stroke="#D9D9D9" opacity=".1"/>
+                        <circle cx="50%" cy="50%" r="98.5" stroke="url(#gradient-2)"/>
+                        <defs>
+                            <linearGradient id="gradient-2" x1="1.97421e-07" y1="82" x2="154" y2="178" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#DF9780"/>
+                                <stop offset="1" stop-color="#A66DE9"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="num">
+                      <h1>90%</h1>
+                      <p>Alcançada</p>
+                    </div>
+                </div>
+                <div class="card-monthly-goal-footer">
+    
+                    <div class="card-goal-legend">
+                        <div class="expected">
+                            <div class="circle-legend expected"></div>
+                            <h6>Esperado</h6>
+                        </div>
+                        <p>R$ 70K</p>
+                    </div>
+    
+                    <div class="card-goal-legend">
+                        <div class="total">
+                            <div class="circle-legend goal total"></div>
+                            <h6>Alcançado</h6>
+                        </div>
+                        <p>R$ 70K</p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="bottom-dashboard">
+            <div class="card">
+                
+                <div class="bar-chart">
+                    <div class="chart-serie">
+                        <div class="column" style="--height: 30%"></div>
+                        <p>Segunda</p>
+                    </div>
+                    <div class="chart-serie">
+                        <div class="column" style="--height: 52%"></div>
+                        <p>Terça</p>
+                    </div>
+                    <div class="chart-serie">
+                        <div class="column" style="--height: 80%"></div>
+                        <p>Quarta</p>
+                    </div>
+                    <div class="chart-serie">
+                        <div class="column" style="--height: 70%"></div>
+                        <p>Quinta</p>
+                    </div>
+                    <div class="chart-serie">
+                        <div class="column" style="--height:65%"></div>
+                        <p>Sexta</p>
+                    </div>
+                    <div class="chart-serie">
+                        <div class="column" style="--height:50%"></div>
+                        <p>Sábado</p>
+                    </div>
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smootyhing: grayscale;
+    scroll-behavior: smooth;
+    font-family: 'Inter';
+}
+  
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #292738;
+    font-size: 1.6rem;
+}
+h1 {
+   color: #FFFFFF;
+   font-size: 3.4rem;
+   line-height: 160%;
+}
+h2 {
+   color: #FFFFFF;
+   font-weight: 600;
+   font-size: 2.4rem;
+   line-height: 160%;
+}
+
+h6 {
+   color: #FFFFFF;
+   font-weight: 500;
+   font-size: 1.4rem;
+   line-height: 160%;
+}
+
+p {
+   color: #FFFFFF;
+   font-weight: 400;
+   font-size: 1.4rem;
+   line-height: 160%;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  margin: 11.2rem auto;
+  max-width: 112rem;
+  gap: 3.2rem;
+
+}
+
+.card {
+  background-color: #363447;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.9rem 4.8rem;
+  gap: 3.2rem;
+  box-shadow: 3px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  max-height: 37.9rem;
+}
+
+.top-dashboard {
+    display: grid;
+    grid-template-columns: 29.6rem 35.1rem 1fr;
+    gap: 3.2rem;
+    max-width: 112rem;
+}
+
+.top-dashboard .card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 4.45rem 0;
+}
+.top-dashboard .card .card-content img {
+   width: 5.4rem;
+   height: 5.4rem;
+}
+
+.top-dashboard .card .card-content h2 {
+   color: #81FBB8;
+}
+
+.top-dashboard .card .card-footer {
+   display: flex;
+   gap: 0.8rem;
+   align-items: center;
+}
+
+.donut-chart
+{
+  width:220px;
+  height:220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.donut-chart svg {
+  width: 197px;
+  height: 197px;
+  transform: rotate(-90deg);
+
+  --dash: 618; /* circunferencia */
+  --donut-chartage: 75;
+}
+
+.donut-chart svg circle {
+  fill: none;
+  stroke-width: 35;
+  stroke-dasharray: var(--dash);
+  stroke-dashoffset: var(--dash);
+}
+
+.donut-chart svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+}
+.donut-chart svg circle:nth-child(2) {
+  stroke-dashoffset: calc(var(--dash) - (var(--dash) * var(--percentage)) / 100);
+  stroke-linecap: round;
+  animation: Progress 1s ease-in-out;
+}
+
+@keyframes Progress {
+  0% {
+    stroke-dasharray: var(--dash);
+    stroke-dashoffset: var(--dash);
+  }
+}
+ .donut-chart .num {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  flex-direction: column;
+  position: absolute;
+  margin: auto;
+}
+
+.donut-chart .num p {
+  font-size: 1.6rem !important;
+  font-weight: 400;
+  margin-top: -1rem;
+}
+.text {
+  padding: 10px 0 0;
+  color:#999;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.card-sales-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-sales-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-sales-legend .expected, .total {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.circle-legend {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.circle-legend.expected {
+  background-color: #4A4556; 
+}
+
+.circle-legend.sales.total{
+ background: linear-gradient(121.94deg, #CE9FFC 15.98%, #7367F0 82.85%);
+}
+
+.card-monthly-goal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-goal-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-goal-legend .expected, .total {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.circle-legend {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.circle-legend.expected {
+  background-color: #4A4556; 
+}
+
+.circle-legend.goal.total{
+  background: linear-gradient(121.94deg, #DF9780 15.98%, #A66DE9 82.85%);
+ }
+
+ .bottom-dashboard {
+  display: grid;
+  grid-template-columns: 3fr;
+  gap: 3.2rem;
+}
+
+.bar-chart {
+  max-width: 52.3rem;
+  height: 18.6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5.9rem;
+}
+
+.bar-chart .chart-serie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .5rem;
+  height: 100% !important;
+}
+
+.bar-chart .chart-serie .column {
+  width: 1.5rem;
+  height: 20%;
+  border-radius: 999rem;
+  background: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
+  transform-origin: bottom top;
+  animation: toUp 1s linear forwards;
+  position: relative;
+}
+
+.bar-chart p {
+  font-weight: 500;
+}
+
+@keyframes toUp {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: var(--height);
+  }
+}
+
+
+
+
