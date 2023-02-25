@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +49,6 @@ p {
   margin: 11.2rem auto;
   max-width: 112rem;
   gap: 3.2rem;
-
 }
 
 .card {
@@ -60,7 +60,6 @@ p {
   gap: 3.2rem;
   box-shadow: 3px 4px 26px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  max-height: 37.9rem;
 }
 
 .top-dashboard {
@@ -68,6 +67,10 @@ p {
     grid-template-columns: 29.6rem 35.1rem 1fr;
     gap: 3.2rem;
     max-width: 112rem;
+}
+
+.top-dashboard .card {
+  justify-content: space-between;
 }
 
 .top-dashboard .card .card-content {
@@ -227,13 +230,69 @@ p {
   gap: 3.2rem;
 }
 
+.bottom-dashboard .card {
+  align-items: flex-start;
+}
+
+.bottom-dashboard .card .content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.bottom-dashboard .card .content .content-left{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.bottom-dashboard .card .content .content-left h2{
+  font-weight: 500;
+}
+
+.bottom-dashboard .card .content .content-left .more-sales, .less-sales {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.bottom-dashboard .card .content .content-left .more-sales .legend {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.bottom-dashboard .card .content .content-left .less-sales .legend {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+
 .bar-chart {
   max-width: 52.3rem;
   height: 18.6rem;
   display: flex;
   flex-direction: row;
   gap: 5.9rem;
+  position: relative;
 }
+
+.bar-chart .line {
+  width: 100%;
+  height: .3rem;
+  border-radius: 999px;
+  background-color: #4A4556;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
 
 .bar-chart .chart-serie {
   display: flex;
@@ -250,8 +309,39 @@ p {
   border-radius: 999rem;
   background: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
   transform-origin: bottom top;
-  animation: toUp 1s linear forwards;
+  animation: toUp 500ms linear forwards;
   position: relative;
+  cursor: pointer;
+}
+
+.popover-text {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background-color: #1b1a25;
+  color: #fff;
+  border-radius: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popover-text::before {
+  content: "";
+  position: absolute;
+  bottom: 35%;
+  left: -10%;
+  transform: translateX(-50%) rotate(90deg);
+  border: 0.5rem solid transparent;
+  border-top-color: #000;
+  z-index: 0;
+}
+
+.bar-chart .chart-serie .column:hover .popover-text {
+  opacity: 1;
+  visibility: visible;
 }
 
 .bar-chart p {
@@ -265,6 +355,130 @@ p {
 
   100% {
     height: var(--height);
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 870px) {
+  .dashboard {
+    margin: 11.2rem 3.2rem;
+  }
+  .card {
+    max-height:45rem;
+  }
+  .top-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .top-dashboard .card:nth-child(3) {
+    grid-column: span 2;
+  }
+  .bottom-dashboard {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 4.0rem;
+  }
+  .bottom-dashboard .card {
+    align-items: center;
+  }
+  .bottom-dashboard .card .content .bar-chart {
+    gap: 5.9rem;
+  }
+  .bottom-dashboard .card .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-dashboard .card .content .content-left{
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .bottom-dashboard .card .content .content-left .more-sales, .less-sales{
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  .dashboard {
+    margin: 11.2rem 3.2rem;
+  }
+  .card {
+    max-height:45rem;
+  }
+  .top-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    max-width: 112rem;
+  }
+  .bottom-dashboard {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 4.0rem;
+  }
+  .bottom-dashboard .card {
+    align-items: center;
+  }
+  .bottom-dashboard .card .content .bar-chart {
+    gap: 2.4rem;
+  }
+  .bottom-dashboard .card .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-dashboard .card .content .content-left{
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .bottom-dashboard .card .content .content-left .more-sales, .less-sales{
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard {
+    margin: 11.2rem 3.2rem;
+  }
+  .card {
+    max-height:45rem;
+  }
+  .top-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    max-width: 112rem;
+  }
+  .bottom-dashboard {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 4.0rem;
+  }
+  .bottom-dashboard .card {
+  align-items: center;
+  }
+  .bottom-dashboard .card .content .bar-chart {
+    gap: 2.4rem;
+  }
+  .bottom-dashboard .card .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-dashboard .card .content .content-left{
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .bottom-dashboard .card .content .content-left .more-sales, .less-sales{
+    align-items: center;
   }
 }
 
