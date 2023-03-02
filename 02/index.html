@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bora codar #02 - Venda de produto</title>
+</head>
+<body>
+    <div id="app">
+        <div class="product">
+            <img src="assets/360.svg" class="icon-360" alt="Ícone 360">
+            <img src="assets/close.svg" class="icon-close" alt="Ícone Close">
+            <img src="assets/product-1.png" id="product-image" alt="Imagem do sofá Sofá Margot II - Rosé">
+        </div>
+        <div class="product-description">
+            <div class="main">
+                <div class="wrapper">
+                    <p>CÓDIGO: 42404</p>
+                    <h1>Sofá Margot II - Rosé</h1>
+                    <h6>R$ 4.000</h6>
+                </div>
+                <button>ADICIONAR À CESTA</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const icon360 = document.querySelector('.icon-360');
+        const iconClose = document.querySelector('.icon-close');
+
+        icon360.addEventListener("click", changeToGif);
+        iconClose.addEventListener("click", changeToPng);
+
+        function changeToGif() {
+
+            const productImage = document.getElementById('product-image');
+
+            productImage.src = "assets/product-1.gif";
+
+            icon360.style.opacity = 0;
+            iconClose.style.opacity = 1;
+        }
+
+        function changeToPng() {
+
+            const productImage = document.getElementById('product-image');
+
+            productImage.src = "assets/product-1.png";
+
+            icon360.style.opacity = 1;
+            iconClose.style.opacity = 0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smootyhing: grayscale;
+    scroll-behavior: smooth;
+    font-family: 'Crimson Pro', serif;
+    font-family: 'Lato', sans-serif;
+}
+  
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #D9CDF7;
+    font-size: 1.6rem;
+}
+
+p, h6, button {
+    font-family: 'Lato';
+}
+
+#app h1 {
+    font-family: 'Crimson Pro';
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 100%;
+    color: #271A45;
+}
+
+
+
+#app h6 {
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+    color: #625580;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.product #product-image {
+    width: 44.9rem;
+    height: 25.26rem;
+}
+
+.product .icon-close, .icon-360 {
+    cursor: pointer;
+}
+
+.product .icon-close {
+    opacity: 0;
+}
+
+.product .icon-360 {
+    width: 3.3rem;
+    height: 2.247rem;
+    justify-content: flex-end;
+}
+
+.product-description .main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.product-description {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.product-description .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.2rem;
+}   
+
+.product-description .wrapper p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    color: #271A45;
+}
+
+.product-description button {
+    display: block;
+    width: fit-content;
+    padding: 0.8rem 1.6rem;
+    background-color: transparent;
+    border: 0.5px solid #271A45;
+    border-radius: 99.9rem;
+    cursor: pointer;
+    color: #271A45;
+    transition: all .5s ease;
+}
+
+.product-description button:hover {
+    background-color: #271A45;
+    color: #FFFFFF;
+}
