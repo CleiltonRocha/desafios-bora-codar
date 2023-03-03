@@ -79,7 +79,7 @@
             <td>08</td>
             <td><a href="07">Dashboard</a></td>
             <td>27/02/23</td>
-            <td align="center" ><a href="07"><img width="300px" src="07/.github/preview.jpg" /></a></td>
+            <td align="center" ><a href="07"><img width="300px" src="08/.github/preview.jpg" /></a></td>
         </tr>
     </tbody>
 </table></p>
