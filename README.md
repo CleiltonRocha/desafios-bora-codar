@@ -2,7 +2,6 @@
 
 <p align="center">
     Projetos #boraCodar da Rocketseat <br>
-    <a href="https://boracodar.dev">Acesse o desafio desta semana clicando aqui</a><br>
     <br><table>
     <thead>
         <tr>
@@ -51,12 +50,6 @@
             <td><a href="02">Product Card</a></td>
             <td>18/01/23</td>
             <td align="center"><a href="02"><img width="300px" src="02/.github/preview.jpg" /></a></td>
-        </tr>
-        <tr>
-            <td>03</td>
-            <td><a href="03">Botões e Cursores</a></td>
-            <td>25/01/23</td>
-            <td align="center"><a href="03"><img width="300px" src="03/.github/preview.jpg" /></a></td>
         </tr>
         <tr>
             <td>04</td>
