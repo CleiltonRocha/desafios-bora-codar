@@ -1,7 +1,7 @@
 # #boraCodar
 
 <p align="center">
-    Desafios do #bora codar promovido pela rocketseat  <br>
+    Desafios do #boracodar promovido pela rocketseat  <br>
     Confira algumas das minhas soluções para cada desafio.
     <br><table>
     <thead>
