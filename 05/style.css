@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smootyhing: grayscale;
+    scroll-behavior: smooth;
+    font-family: 'Rubik';
+}
+  
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(180deg, #807ECE 0%, #8E7ECE 100%) !important;
+    font-size: 1.6rem;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator {
+    width: 35.6rem;
+    height: 56.6rem;
+    padding: 5.4rem 3.2rem 3.2rem 3.2rem;
+    background: #2D2A37;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01),
+    0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15),
+    0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29),
+    inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+    inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+
+.view {
+    width: 28.8rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.2rem 0 1.8rem;
+    gap: .8rem;
+}
+
+.view .request {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.view .request span {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    color: #6B6B6B;
+}
+
+.view .result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view .result i {
+    color: #6B6B6B;
+    font-size: 2rem;
+}
+
+.view .result h1 {
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #EBEBEB;
+}
+
+.calc {
+
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.calc .button {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2D2A37;
+    box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+    border-radius: 99.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.02em;
+
+    color: #EBEBEB;
+    cursor: pointer;
+}
+
+.button.ce {
+    color: #975DFA;
+}
+
+.calc .button i {
+    font-size: 2.8rem;
+}
+
+.calc .button.operator {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
+}
+
+.calc .button.equal {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7F45E2;
+}
