@@ -78,9 +78,15 @@
         </tr>
         <tr>
             <td>08</td>
-            <td><a href="07">Dashboard</a></td>
+            <td><a href="08">Dashboard</a></td>
             <td>27/02/23</td>
             <td align="center" ><a href="07"><img width="300px" src="08/.github/preview.jpg" /></a></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><a href="09">Weather Dashboard</a></td>
+            <td>27/02/23</td>
+            <td align="center"><a href="09"><img width="300px" src="09/.github/preview.jpg" /></a></td>
         </tr>
     </tbody>
 </table></p>
