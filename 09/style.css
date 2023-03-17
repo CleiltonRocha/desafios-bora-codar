@@ -1,0 +1,363 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smootyhing: grayscale;
+  scroll-behavior: smooth;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+main {
+  background: url('./assets/background.jpg') no-repeat center/cover;
+  min-height: 100vh; /* Define a altura do body para 100% da altura da tela */
+  display: grid;
+  place-content: center;
+  grid-template-rows: max-content max-content max-content max-content;
+  gap: 3.2rem;
+
+  padding: 6.4rem;
+}
+
+section {
+  background-color: #6D67D0;
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+}
+
+main .temperature-now {
+  background: url('./assets/bg-temperature-now.jpg') no-repeat center/cover;
+  position: relative;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+}
+
+.temperature-now::before {
+  content: "";
+  width: 17.6rem;
+  height: 17.6rem;
+  background: url('assets/double-clouds.svg') no-repeat;
+  position: absolute;
+  top: -5.6rem;
+  left: -5.6rem;
+}
+
+.temperature-now .location {
+  justify-self: end;
+  padding: 3.2rem 3.2rem 0; 
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.temperature-now .location span {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #C2BFF4;
+}
+
+.temperature-now .temp {
+  margin: 6rem;
+}
+
+.temperature-now .temp .number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.temperature-now .temp .number strong{
+  font-size: 8.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.temperature-now .temp .number sup{
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #DAD8F7;
+  position: absolute;
+  top: 1.6rem;
+}
+
+.temperature-now .temp .number .max-min {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.temperature-now .temp .number .max-min .max{
+  color: #FFFFFF;
+}
+
+.temperature-now .temp .number .max-min .min{
+  color: #C2BFF4;
+}
+
+.temperature-now .statistics {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1.2rem;
+}
+
+.temperature-now .statistics .info{
+  background: rgba(102, 96, 200, 0.6);
+  padding: 1.2rem 1.6rem;
+  border-radius: .6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.temperature-now .statistics .info .data {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature-now .statistics .info .data span {
+  color: #E7E6FB;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.temperature-now .statistics .info .data .number {
+  display: flex;
+  gap: .4rem;
+  align-items: flex-end;
+}
+
+.temperature-now .statistics .info .data .number strong {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #E7E6FB;
+}
+
+.temperature-now .statistics .info .data .number small {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #DAD8F7;
+}
+
+.air-quality {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding: 3.2rem 1.6rem 1.6rem 1.6rem;
+}
+
+.air-quality .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.air-quality .title h2{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #DAD8F7;
+}
+
+.air-quality .quality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+
+.air-quality .quality span {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #87EBCD;
+}
+
+.air-quality .quality strong {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #E7E6FB;
+}
+
+.air-quality .footer {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.air-quality .footer .level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.air-quality .footer .level strong {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #87EBCD;
+}
+
+.air-quality .footer .level span {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #E7E6FB;
+}
+
+.sun-time {
+  padding: 3.2rem 1.6rem 1.6rem 1.6rem;
+}
+
+.sun-time .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.sun-time .title h2{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #DAD8F7;
+}
+
+.sun-chart-wrapper {
+  margin-top: 4rem;
+  height: 11rem;
+  position: relative;
+}
+
+.sun-chart {
+  --pos-x: 50;
+  width: 21.6rem;
+  height: 21.6rem;
+  margin: auto;
+  position: relative;
+}
+
+.sun-chart::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  background-color: #F6CB33;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin: -0.6rem;
+
+  transform: rotate(calc(1deg * ( ((100 - var(--pos-x)) /-100)* 180))) translate(10.6rem);
+}
+.chart {
+  width: 21.6rem;
+  height: 10.8rem;
+  overflow: hidden;
+}
+
+.chart::before {
+  content: "";
+  width: 20.9rem;
+  height: 20.9rem;
+
+  display: block;
+  border-radius: 50%;
+  background: linear-gradient(180deg,
+   rgba(251, 219, 96, 0.2) 0%,
+   rgba(251, 219, 96, 0) 101.89%);
+
+  --mask: linear-gradient(0deg, white 50%, transparent 0%);
+  mask: var(--mask);
+  -webkit-mask: var(--mask);
+
+  rotate: calc(1.8deg * var(--pos-x));
+}
+
+.chart img {
+  position: absolute;
+  top: 0;
+  left: -1;
+}
+
+time.now {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.time {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 24rem;
+  margin: .8rem auto 0;
+}
+
+.week-weather {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.week-weather .day-week #double-clouds {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.week-weather .day-week {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.week-weather .day-week h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #DAD8F7;
+}
+
+.week-weather .day-week .max-min {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.week-weather .day-week .max-min .max {
+  color: #FFFFFF;
+}
+
+.week-weather .day-week .max-min .min {
+  color: #C2BFF4;
+}
+
+/* Media queries */
+
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: 48rem 27.7rem 27.7rem;
+    grid-template-rows: 24.4rem 21.2rem;
+  }
+
+  .temperature-now {
+    grid-row: 1/3;
+  }
+  .week-weather {
+    grid-column: 2/4;
+  }
+}
