@@ -1,0 +1,207 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smootyhing: grayscale;
+  scroll-behavior: smooth;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  height: 100vh;
+  background-color: #F8FAFC;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.image {
+  display: none;
+  height: 100vh;
+  background: url('assets/bg.jpg') no-repeat;
+  background-size: cover;
+}
+
+.login {
+  margin: 4rem 11.2rem;
+}
+
+.login-wrapper {
+  margin-top: 11.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 38.4rem;
+}
+
+.login-wrapper .login-header h1{
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: #1E293B;
+}
+
+.login-wrapper .login-header p {
+  margin-top: 1.6rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #475569;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.input-group .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  position: relative;
+}
+
+.input-group .input-wrapper label{
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #1E293B;
+}
+
+.input-group .input-wrapper input{
+  padding: 1.6rem 1.2rem;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.4rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #1E293B;
+  transition: .4s ease;
+}
+ 
+.input-group .input-wrapper small{
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #ED3A5A;
+  display: none;
+}
+
+.input-group .input-wrapper img{
+  position: absolute;
+  right: 1.2rem;
+  top: 4.6rem;
+  cursor: pointer;
+}
+
+.input-group .input-wrapper img.d-none {
+  display: none;
+}
+
+.input-group .input-wrapper input:hover {
+  border: 1px solid #7C3AED;
+}
+
+.input-group .input-wrapper input:focus{
+  border: 1px solid #7C3AED;
+  outline: none;
+}
+
+.input-group .input-wrapper input::placeholder {
+  color: #94A3B8; 
+}
+
+.input-group .input-wrapper .password-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-group .input-wrapper .password-header a {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #7C3AED;
+}
+
+.login-form button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  gap: 1rem;
+  background: #7C3AED;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #FFFFFF;
+
+  transition: .4s ease-in-out;
+}
+
+.login-form button[type="submit"]:hover {
+  background: #9F67FF;
+}
+
+.login-form span {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #475569;
+}
+
+.login-form span a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #7C3AED;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    place-items: unset;
+  }
+  .image {
+    display: block;
+  }
+}
+
+@media (max-width: 560px) {
+  .login {
+    margin: 4rem 5.6rem;
+  }
+}

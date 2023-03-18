@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Desafio 11 - #boracodar</title>
+</head>
+<body>
+  <div class="main">
+    <div class="login">
+      <img src="assets/logo.svg" alt="Logo Vertigo">
+
+      <div class="login-wrapper">
+        <div class="login-header">  
+          <h1>Acesse a plataforma</h1>
+          <p>Faça login ou registre-se para começar a construir seus projetos ainda hoje.</p>  
+        </div>
+        <div class="login-form">
+          <div class="input-group">
+            <div class="input-wrapper">
+              <label  for= "email">E-mail</label>
+              <input id="email" type="text" placeholder="Digite seu e-mail">
+              <small id="error-message">Digite um e-mail válido</small>
+            </div>
+            <div class="input-wrapper">
+              <div class="password-header">
+                <label for="password">Senha</label>
+                <a href="">Esqueceu a senha?</a>
+              </div>
+              <input type="password" placeholder="Digite seu e-mail" id="input-password">
+              <img id="olho-off" src="assets/icon-eye-off.svg" alt="Ícone olho cortado" class="eye" onclick="handleEye('olho-off', 'olho-on')">
+              <img id="olho-on" src="assets/icon-eye-on.svg" alt="Ícone olho" class="eye d-none" onclick="handleEye('olho-on', 'olho-off')">
+            </div>
+          </div>
+
+          <button type="submit" onclick="validate();">Entrar</button>
+          <span>
+            Ainda não tem uma conta? <a href="#">Inscreva-se</a> 
+          </span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="image"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
