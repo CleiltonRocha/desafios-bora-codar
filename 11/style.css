@@ -204,4 +204,7 @@ a:hover {
   .login {
     margin: 4rem 5.6rem;
   }
+  .login-wrapper {
+    margin-top: 3.2rem;
+  }
 }
