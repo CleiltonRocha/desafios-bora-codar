@@ -30,6 +30,28 @@ body {
     height: 100vh;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    #app {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem;
+        height: auto;
+    }
+
+    #player-1,#player-1, #player-3  {
+        width: 100% !important;
+    }
+
+    #player-1 .wrapper {
+        align-items: center;
+    }
+
+    #player-1 .wrapper .player-progress {
+        width: 100%;
+    }
+}
+
 
 #app h1 {
     font-weight: 700;
